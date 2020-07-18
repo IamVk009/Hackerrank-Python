@@ -1,0 +1,15 @@
+if __name__ == '__main__':
+    l1 = []
+    l2 = []
+    l3 = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        l1.append(name)
+        l2.append(score)
+        l3.append([name,score])
+    d = dict(l3)
+    Second_Lowest = sorted(l2)[1]
+    for name,score in sorted(l3):
+        if score == Second_Lowest:
+            print(name)
