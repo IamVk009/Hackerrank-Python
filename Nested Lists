@@ -8,8 +8,7 @@ if __name__ == '__main__':
         l1.append(name)
         l2.append(score)
         l3.append([name,score])
-    d = dict(l3)
-    Second_Lowest = sorted(l2)[1] # Returns second lowest element in the score list.
+    Second_Lowest = sorted(list(dict.fromkeys(l2)))[1] # Returns second lowest element in the score list.
     for name,score in sorted(l3):
         if score == Second_Lowest:
             print(name)
